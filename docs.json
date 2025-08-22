@@ -30,6 +30,11 @@
       "display": "simple"
     }
   },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-BLTVPB0N6L"
+    }
+  }
   "navigation": {
     "tabs": [
       {
