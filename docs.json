@@ -46,35 +46,18 @@
         "tab": "Abscissa",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Contributing",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "/Abscissa/Contributing/Code-of-conduct",
+              "/Abscissa/Contributing/Process",
+              "/Abscissa/Contributing/Security-breaches"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Legal",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "/Abscissa/Legal/Privacy-policy",
+              "/Abscissa/Legal/License"
             ]
           }
         ]
@@ -83,29 +66,12 @@
         "tab": "Abscissa API",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "User",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "/AbscissaAPI/User/Data"
             ]
           }
         ]
-      },
-      {
-        "tab": "Mathsys",
-        "groups": []
-      },
-      {
-        "tab": "Mathsys API",
-        "groups": []
       }
     ],
     "global": {
