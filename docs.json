@@ -7,7 +7,11 @@
     "light": "#7F7FD2",
     "dark": "#4D4DA0"
   },
-  "favicon": "/favicon.ico",
+  "description": "Abscissa and Mathsys documentation.", 
+  "favicon": {
+    "light": "/logoDark.svg",
+    "dark": "/logoLight.svg"
+  },
   "navigation": {
     "tabs": [
       {
