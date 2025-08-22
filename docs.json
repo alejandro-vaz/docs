@@ -57,6 +57,8 @@
             "group": "Legal",
             "pages": [
               "/Abscissa/Legal/Privacy-policy",
+              "/Abscissa/Legal/Terms-and-conditions",
+              "/Abscissa/Legal/Cookies-policy",
               "/Abscissa/Legal/License"
             ]
           }
@@ -118,6 +120,13 @@
     "socials": {
       "x": "https://x.com/abscissa_math",
       "github": "https://github.com/abscissa_math"
+    }
+  },
+  "seo": {
+    "indexing": "all",
+    "metatags": {
+      "og:type": "website",
+      "og:site_name": "Your docs"
     }
   }
 }
