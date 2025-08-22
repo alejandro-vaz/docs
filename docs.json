@@ -7,7 +7,34 @@
     "light": "#7F7FD2",
     "dark": "#4D4DA0"
   },
-  "favicon": "/favicon.ico",
+  "description": "Abscissa and Mathsys documentation.", 
+  "favicon": {
+    "light": "/logoDark.svg",
+    "dark": "/logoLight.svg"
+  },
+  "thumbnails": {
+    "background": "/background.png"
+  },
+  "styling": {
+    "eyebrows": "section",
+    "codeblocks": "dark"
+  },
+  "appearance": {
+    "strict": true
+  },
+  "api": {
+    "params": {
+      "expanded": "all"
+    },
+    "playground": {
+      "display": "simple"
+    }
+  },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-BLTVPB0N6L"
+    }
+  },
   "navigation": {
     "tabs": [
       {
@@ -111,14 +138,9 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
      "chatgpt",
      "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
+     "copy"
    ]
   },
   "footer": {
