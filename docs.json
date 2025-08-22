@@ -3,7 +3,8 @@
   "theme": "almond",
   "name": "Abscissa",
   "colors": {
-    "primary": "#7F7FD2",
+    "primary": "#6666B9",
+    "light": "#7F7FD2",
     "dark": "#4D4DA0"
   },
   "description": "Abscissa and Mathsys documentation.", 
