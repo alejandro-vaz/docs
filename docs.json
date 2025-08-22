@@ -1,17 +1,17 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Abscissa",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#6666B9",
+    "light": "#7F7FD2",
+    "dark": "#4D4DA0"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Abscissa",
         "groups": [
           {
             "group": "Getting started",
@@ -48,7 +48,7 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Abscissa API",
         "groups": [
           {
             "group": "API documentation",
@@ -66,43 +66,47 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Mathsys",
+        "groups": []
+      },
+      {
+        "tab": "Mathsys API",
+        "groups": []
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Abscissa",
+          "href": "https://github.com/alejandro-vaz/abscissa",
+          "icon": "github"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Mathsys",
+          "href": "https://github.com/alejandro-vaz/mathsys",
+          "icon": "github"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logoDark.svg",
+    "dark": "/logoLight.svg",
+    "href": "https://abscissa.eu"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@abscissa.eu"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Live",
+      "href": "https://abscissa.eu"
     }
   },
   "contextual": {
@@ -119,9 +123,8 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/abscissa_math",
+      "github": "https://github.com/abscissa_math"
     }
   }
 }
