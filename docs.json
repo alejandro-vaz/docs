@@ -22,10 +22,6 @@
   "appearance": {
     "strict": true
   },
-  "banner": {
-    "content": "We are looking for collaborators! Feel free to contact us!",
-    "dismissible": true
-  },
   "navigation": {
     "tabs": [
       {
