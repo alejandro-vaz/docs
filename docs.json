@@ -16,7 +16,7 @@
     "background": "/background.png"
   },
   "styling": {
-    "eyebrows": "section"
+    "eyebrows": "breadcrumbs"
   },
   "navigation": {
     "tabs": [
