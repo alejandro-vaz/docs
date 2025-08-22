@@ -12,6 +12,9 @@
     "light": "/logoDark.svg",
     "dark": "/logoLight.svg"
   },
+  "thumbnails": {
+    "background": "/background.png"
+  },
   "navigation": {
     "tabs": [
       {
