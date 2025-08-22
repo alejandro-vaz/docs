@@ -35,6 +35,11 @@
       "measurementId": "G-BLTVPB0N6L"
     }
   },
+  "errors": {
+    "404": {
+      "redirect": true
+    }
+  },
   "navigation": {
     "tabs": [
       {
