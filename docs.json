@@ -22,6 +22,14 @@
   "appearance": {
     "strict": true
   },
+  "api": {
+    "params": {
+      "expanded": "all"
+    },
+    "playground": {
+      "display": "simple"
+    }
+  },
   "navigation": {
     "tabs": [
       {
