@@ -126,7 +126,8 @@
   "contextual": {
     "options": [
      "chatgpt",
-     "claude"
+     "claude",
+     "copy"
    ]
   },
   "footer": {
