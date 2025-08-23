@@ -129,10 +129,10 @@
     }
   },
   "seo": {
-    "indexing": "all",
     "metatags": {
       "og:type": "website",
-      "og:site_name": "Your docs"
+      "og:site_name": "Your docs",
+      "og:image": "/background.png"
     }
   }
 }
