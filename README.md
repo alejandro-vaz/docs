@@ -1,3 +1,3 @@
-# Documentation
+# Abscissa documentation
 
-Visit our [documentation](https://docs.abscissa.eu) live for viewing it.
+Read our documentation in our [docs website](https://docs.abscissa.eu).
