@@ -50,27 +50,33 @@
             "pages": [
               "/Abscissa/Contributing/Code-of-conduct",
               "/Abscissa/Contributing/Process",
-              "/Abscissa/Contributing/Security-breaches"
+              "/Abscissa/Contributing/Security"
             ]
           },
           {
             "group": "Legal",
             "pages": [
               "/Abscissa/Legal/Privacy-policy",
-              "/Abscissa/Legal/Terms-and-conditions",
-              "/Abscissa/Legal/Cookies-policy",
               "/Abscissa/Legal/License"
             ]
           }
         ]
       },
       {
-        "tab": "Abscissa API",
+        "tab": "Mathsys",
         "groups": [
           {
-            "group": "User",
+            "group": "Contributing",
             "pages": [
-              "/AbscissaAPI/User/Data"
+              "/Mathsys/Contributing/Code-of-conduct",
+              "/Mathsys/Contributing/Process",
+              "/Mathsys/Contributing/Security"
+            ]
+          },
+          {
+            "group": "Legal",
+            "pages": [
+              "/Mathsys/Legal/License"
             ]
           }
         ]
@@ -99,7 +105,7 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
+        "label": "Contact us",
         "href": "mailto:support@abscissa.eu"
       }
     ],
