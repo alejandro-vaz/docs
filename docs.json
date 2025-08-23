@@ -131,7 +131,9 @@
   "seo": {
     "metatags": {
       "og:type": "website",
-      "og:site_name": "Your docs",
+      "og:site_name": "Abscissa Documentation",
+      "twitter:card": "summary_large_image",
+      "twitter:image": "/background.png",
       "og:image": "/background.png"
     }
   }
