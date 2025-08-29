@@ -131,7 +131,6 @@
     }
   },
   "seo": {
-    "indexing": "all",
     "metatags": {
       "og:type": "website",
       "og:site_name": "Abscissa Documentation",
