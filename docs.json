@@ -50,7 +50,8 @@
             "pages": [
               "/Abscissa/Contributing/Code-of-conduct",
               "/Abscissa/Contributing/Process",
-              "/Abscissa/Contributing/Security"
+              "/Abscissa/Contributing/Security",
+              "/Abscissa/Contributing/Changelog"
             ]
           },
           {
@@ -70,7 +71,8 @@
             "pages": [
               "/Mathsys/Contributing/Code-of-conduct",
               "/Mathsys/Contributing/Process",
-              "/Mathsys/Contributing/Security"
+              "/Mathsys/Contributing/Security",
+              "/Mathsys/Contributing/Changelog"
             ]
           },
           {
@@ -132,7 +134,11 @@
     "indexing": "all",
     "metatags": {
       "og:type": "website",
-      "og:site_name": "Your docs"
+      "og:site_name": "Abscissa Documentation",
+      "twitter:card": "summary_large_image",
+      "twitter:image": "/background.png",
+      "og:image": "/background.png",
+      "twitter:site": "@abscissa_math"
     }
   }
 }
