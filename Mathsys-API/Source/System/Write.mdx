@@ -1,0 +1,113 @@
+---
+title: "Write"
+description: "Prints all bytes until it finds a null one."
+icon: "pen"
+iconType: "solid"
+---
+
+## Parameters
+<ParamField path="pointer" type="*const u8" required/>
+
+## Response
+<ResponseField name="" type="()" required/>
+
+<RequestExample>
+```rust From main.rs
+stack::system::write(pointer);
+```
+```rust Elsewhere
+crate::stack::system::write(pointer);
+```
+</RequestExample>
+
+<ResponseExample>
+```rust Wrapper system.rs
+//
+//  IMPORTS
+//
+
+// IMPORTS -> BLOCK
+unsafe extern "C" {
+    fn systemWrite(pointer: *const u8) -> ();
+    fn systemExit(code: u8) -> !;
+}
+
+
+//
+//  WRAPPERS
+//
+
+// WRAPPERS -> WRITE
+#[inline(always)]
+pub unsafe fn write(pointer: *const u8) -> () {systemWrite(pointer)}
+
+// WRAPPERS -> SYSTEMEXIT
+#[inline(always)]
+pub unsafe fn exit(code: u8) -> ! {systemExit(code)}
+```
+</ResponseExample>
+
+
+## Implementation
+<CodeGroup dropdown>
+```asm write.asm lines expandable
+;
+;   HEAD
+;
+
+; HEAD -> GLOBALS
+global systemWrite
+
+; HEAD -> MARK
+section .text
+
+
+;
+;   SYSTEM
+;
+
+; SYSTEM -> WRITE
+systemWrite:;                                                                   systemWrite(rdi)
+    mov rsi, rdi
+    xor rcx, rcx
+    .find:
+        cmp byte [rsi + rcx], 0
+        je .found
+        inc rcx
+        jmp .find
+    .found:
+        mov rax, 1
+        mov rdi, 1
+        mov rdx, rcx
+        syscall
+        ret
+```
+```wasm write.wat lines expandable
+;; SYSTEM -> WRITE
+(func $systemWrite (param $pointer i32);;                                       systemWrite(pointer: i32)
+    (local $length i32)
+    i32.const 0
+    local.set $length
+    block $break
+        loop $scan
+            local.get $pointer
+            local.get $length
+            i32.add
+            i32.load8_u
+            i32.eqz
+            br_if $break
+            local.get $length
+            i32.const 1
+            i32.add
+            local.set $length
+            br $scan
+        end
+    end
+    local.get $pointer
+    local.get $length
+    call $call1
+)(export "systemWrite" (func $systemWrite))
+
+
+```
+</CodeGroup>

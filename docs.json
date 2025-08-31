@@ -1,143 +1,160 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
-  "name": "Abscissa",
-  "colors": {
-    "primary": "#6666B9",
-    "light": "#7F7FD2",
-    "dark": "#4D4DA0"
-  },
-  "description": "Abscissa and Mathsys documentation.", 
-  "favicon": {
-    "light": "/logoDark.svg",
-    "dark": "/logoLight.svg"
-  },
-  "thumbnails": {
-    "background": "/background.png"
-  },
-  "styling": {
-    "eyebrows": "section",
-    "codeblocks": "dark"
-  },
-  "appearance": {
-    "strict": true
-  },
-  "api": {
-    "params": {
-      "expanded": "all"
+    "$schema": "https://mintlify.com/docs.json",
+    "theme": "almond",
+    "name": "Abscissa",
+    "colors": {
+        "primary": "#6666B9",
+        "light": "#7F7FD2",
+        "dark": "#4D4DA0"
     },
-    "playground": {
-      "display": "simple"
-    }
-  },
-  "integrations": {
-    "ga4": {
-      "measurementId": "G-BLTVPB0N6L"
-    }
-  },
-  "errors": {
-    "404": {
-      "redirect": true
-    }
-  },
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Abscissa",
-        "groups": [
-          {
-            "group": "Contributing",
-            "pages": [
-              "/Abscissa/Contributing/Code-of-conduct",
-              "/Abscissa/Contributing/Process",
-              "/Abscissa/Contributing/Security",
-              "/Abscissa/Contributing/Changelog"
-            ]
-          },
-          {
-            "group": "Legal",
-            "pages": [
-              "/Abscissa/Legal/Privacy-policy",
-              "/Abscissa/Legal/License"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Mathsys",
-        "groups": [
-          {
-            "group": "Contributing",
-            "pages": [
-              "/Mathsys/Contributing/Code-of-conduct",
-              "/Mathsys/Contributing/Process",
-              "/Mathsys/Contributing/Security",
-              "/Mathsys/Contributing/Changelog"
-            ]
-          },
-          {
-            "group": "Legal",
-            "pages": [
-              "/Mathsys/Legal/License"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Abscissa",
-          "href": "https://github.com/alejandro-vaz/abscissa",
-          "icon": "github"
+    "description": "Abscissa and Mathsys documentation.", 
+    "favicon": {
+        "light": "/logoDark.svg",
+        "dark": "/logoLight.svg"
+    },
+    "thumbnails": {
+        "background": "/background.png"
+    },
+    "styling": {
+        "eyebrows": "section",
+        "codeblocks": "dark"
+    },
+    "appearance": {
+        "strict": true
+    },
+    "api": {
+        "params": {
+            "expanded": "all"
         },
-        {
-          "anchor": "Mathsys",
-          "href": "https://github.com/alejandro-vaz/mathsys",
-          "icon": "github"
+        "playground": {
+            "display": "interactive"
         }
-      ]
+    },
+    "integrations": {
+        "ga4": {
+            "measurementId": "G-BLTVPB0N6L"
+        }
+    },
+    "errors": {
+        "404": {
+            "redirect": true
+        }
+    },
+    "navigation": {
+        "tabs": [
+            {
+                "tab": "Abscissa",
+                "groups": [
+                    {
+                        "group": "Contributing",
+                        "pages": [
+                            "/Abscissa/Contributing/Code-of-conduct",
+                            "/Abscissa/Contributing/Process",
+                            "/Abscissa/Contributing/Security",
+                            "/Abscissa/Contributing/Changelog"
+                        ]
+                    },
+                    {
+                        "group": "Legal",
+                        "pages": [
+                            "/Abscissa/Legal/Privacy-policy",
+                            "/Abscissa/Legal/License"
+                        ]
+                    }
+                ]
+            },
+            {
+                "tab": "Mathsys",
+                "groups": [
+                    {
+                        "group": "Contributing",
+                        "pages": [
+                            "/Mathsys/Contributing/Code-of-conduct",
+                            "/Mathsys/Contributing/Process",
+                            "/Mathsys/Contributing/Security",
+                            "/Mathsys/Contributing/Changelog"
+                        ]
+                    },
+                    {
+                        "group": "Legal",
+                        "pages": [
+                            "/Mathsys/Legal/License"
+                        ]
+                    }
+                ]
+            },
+            {
+                "tab": "Mathsys API",
+                "groups": [
+                    {
+                        "group": "Source",
+                        "pages": [
+                            {
+                                "group": "System",
+                                "pages": [
+                                    "/Mathsys-API/Source/System/Exit",
+                                    "/Mathsys-API/Source/System/Write"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "global": {
+            "anchors": [
+                {
+                    "anchor": "Abscissa",
+                    "href": "https://github.com/alejandro-vaz/abscissa",
+                    "icon": "github"
+                },
+                {
+                    "anchor": "Mathsys",
+                    "href": "https://github.com/alejandro-vaz/mathsys",
+                    "icon": "github"
+                }
+            ]
+        }
+    },
+    "logo": {
+        "light": "/logoDark.svg",
+        "dark": "/logoLight.svg",
+        "href": "https://abscissa.eu"
+    },
+    "navbar": {
+        "links": [
+            {
+                "label": "Contact us",
+                "href": "mailto:support@abscissa.eu"
+            }
+        ],
+        "primary": {
+            "type": "button",
+            "label": "Live",
+            "href": "https://abscissa.eu"
+        }
+    },
+    "contextual": {
+        "options": [
+         "chatgpt",
+         "claude",
+         "copy"
+     ]
+    },
+    "footer": {
+        "socials": {
+            "x": "https://x.com/abscissa_math",
+            "github": "https://github.com/abscissa_math"
+        }
+    },
+    "seo": {
+        "metatags": {
+            "og:type": "website",
+            "og:site_name": "Abscissa Documentation",
+            "twitter:card": "summary_large_image",
+            "twitter:image": "/background.png",
+            "og:image": "/background.png",
+            "twitter:site": "@abscissa_math"
+        }
     }
-  },
-  "logo": {
-    "light": "/logoDark.svg",
-    "dark": "/logoLight.svg",
-    "href": "https://abscissa.eu"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Contact us",
-        "href": "mailto:support@abscissa.eu"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Live",
-      "href": "https://abscissa.eu"
-    }
-  },
-  "contextual": {
-    "options": [
-     "chatgpt",
-     "claude",
-     "copy"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/abscissa_math",
-      "github": "https://github.com/abscissa_math"
-    }
-  },
-  "seo": {
-    "metatags": {
-      "og:type": "website",
-      "og:site_name": "Abscissa Documentation",
-      "twitter:card": "summary_large_image",
-      "twitter:image": "/background.png",
-      "og:image": "/background.png",
-      "twitter:site": "@abscissa_math"
-    }
-  }
 }
