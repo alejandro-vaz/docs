@@ -65,7 +65,7 @@ class GitHubContentReplacer:
         """Process a single .md file, replacing GitHub URLs with content and outputting to .mdx."""
         try:
             # Only process .md files
-            if file_path.suffix.lower() != '.md':
+            if file_path.suffix.lower() != '.mdf':
                 return False
             
             # Skip README.md files
@@ -112,7 +112,7 @@ class GitHubContentReplacer:
         total_files = 0
         processed_files = 0
         
-        for file_path in self.base_dir.rglob('*.md'):
+        for file_path in self.base_dir.rglob('*.mdf'):
             if file_path.is_file():
                 total_files += 1
                 if self.process_file(file_path):

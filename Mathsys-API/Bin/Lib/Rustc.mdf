@@ -1,0 +1,20 @@
+---
+title: "Rustc"
+description: "Utilities to help the compiler."
+icon: "rust"
+iconType: "solid"
+---
+
+<RequestExample>
+```rust Functions
+// Not used anywhere
+// Code doesn't compile without them
+```
+</RequestExample>
+
+## Implementation
+<CodeGroup dropdown>
+```rust rustc.rs lines expandable
+https://raw.githubusercontent.com/alejandro-vaz/mathsys/main/python/mathsys/dev/bin/lib/rustc.rs
+```
+</CodeGroup>

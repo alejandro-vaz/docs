@@ -1,0 +1,20 @@
+---
+title: "Memory"
+description: "Low-level utilities."
+icon: "memory"
+iconType: "solid"
+---
+
+<RequestExample>
+```rust Functions
+// Not used anywhere
+// Code doesn't compile without them
+```
+</RequestExample>
+
+## Implementation
+<CodeGroup dropdown>
+```rust memory.rs lines expandable
+https://raw.githubusercontent.com/alejandro-vaz/mathsys/main/python/mathsys/dev/bin/lib/memory.rs
+```
+</CodeGroup>

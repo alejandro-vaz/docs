@@ -87,6 +87,27 @@
                 "tab": "Mathsys API",
                 "groups": [
                     {
+                        "group": "Bin",
+                        "pages": [
+                            {
+                                "group": "Lib",
+                                "pages": [
+                                    "/Mathsys-API/Bin/Lib/Allocator",
+                                    "/Mathsys-API/Bin/Lib/Memory",
+                                    "/Mathsys-API/Bin/Lib/Number",
+                                    "/Mathsys-API/Bin/Lib/Rustc",
+                                    "/Mathsys-API/Bin/Lib/Stdout"
+                                ]
+                            },
+                            {
+                                "group": "Stack",
+                                "pages": [
+                                    "/Mathsys-API/Bin/Stack/System"
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "group": "Source",
                         "pages": [
                             {

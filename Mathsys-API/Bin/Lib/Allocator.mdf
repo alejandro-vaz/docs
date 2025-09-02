@@ -1,0 +1,41 @@
+---
+title: "Allocator"
+description: "Stack allocator that manages program memory."
+icon: "location-dot"
+iconType: "solid"
+---
+
+<RequestExample>
+```rust Methods on main.rs
+ALLOCATOR.init();
+ALLOCATOR.start();
+ALLOCATOR.end();
+ALLOCATOR.mark();
+ALLOCATOR.reset(mark);
+ALLOCATOR.tempSpace(process);
+```
+```rust Methods elsewhere
+crate::ALLOCATOR.init();
+crate::ALLOCATOR.start();
+crate::ALLOCATOR.end();
+crate::ALLOCATOR.mark();
+crate::ALLOCATOR.reset(mark);
+crate::ALLOCATOR.tempSpace(process);
+```
+</RequestExample>
+
+<ResponseExample>
+```rust Declaration main.rs
+static ALLOCATOR: allocator::Allocator = allocator::Allocator::new();
+```
+```rust Initialization main.rs
+ALLOCATOR.init();
+```
+</ResponseExample>
+
+## Implementation
+<CodeGroup dropdown>
+```rust allocator.rs lines expandable
+https://raw.githubusercontent.com/alejandro-vaz/mathsys/main/python/mathsys/dev/bin/lib/allocator.rs
+```
+</CodeGroup>

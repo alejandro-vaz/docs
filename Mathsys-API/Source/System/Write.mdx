@@ -5,18 +5,9 @@ icon: "pen"
 iconType: "solid"
 ---
 
-## Parameters
-<ParamField path="pointer" type="*const u8" required/>
-
-## Response
-<ResponseField name="" type="()" required/>
-
 <RequestExample>
-```rust From main.rs
-stack::system::write(pointer);
-```
-```rust Elsewhere
-crate::stack::system::write(pointer);
+```rust From system.rs
+systemWrite(pointer);
 ```
 </RequestExample>
 
@@ -39,11 +30,11 @@ unsafe extern "C" {
 
 // WRAPPERS -> WRITE
 #[inline(always)]
-pub unsafe fn write(pointer: *const u8) -> () {systemWrite(pointer)}
+pub fn write(pointer: *const u8) -> () {unsafe{systemWrite(pointer)}}
 
-// WRAPPERS -> SYSTEMEXIT
+// WRAPPERS -> EXIT
 #[inline(always)]
-pub unsafe fn exit(code: u8) -> ! {systemExit(code)}
+pub fn exit(code: u8) -> ! {unsafe{systemExit(code)}}
 ```
 </ResponseExample>
 
@@ -84,27 +75,27 @@ systemWrite:;                                                                   
 ```
 ```wasm write.wat lines expandable
 ;; SYSTEM -> WRITE
-(func $systemWrite (param $pointer i32);;                                       systemWrite(pointer: i32)
-    (local $length i32)
-    i32.const 0
-    local.set $length
+(func $systemWrite (param $pointer i32)
+    (local $current i32)
+    local.get $pointer
+    local.set $current
     block $break
         loop $scan
-            local.get $pointer
-            local.get $length
-            i32.add
+            local.get $current
             i32.load8_u
             i32.eqz
             br_if $break
-            local.get $length
+            local.get $current
             i32.const 1
             i32.add
-            local.set $length
+            local.set $current
             br $scan
         end
     end
+    local.get $current
     local.get $pointer
-    local.get $length
+    i32.sub
+    local.get $pointer
     call $call1
 )(export "systemWrite" (func $systemWrite))
 

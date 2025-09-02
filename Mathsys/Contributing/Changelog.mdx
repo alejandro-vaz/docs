@@ -127,6 +127,23 @@ mode: "wide"
                 1. Streamlined compilation process with `all.o` binaries.
                 1. Refactored complex functions in the compilation steps to keep cyclomatic complexity under 10.
             </Accordion>
+            <Accordion title="v1.4.124">
+                ## Major
+                1. Optimized package structure to preserve previous versions.
+                1. Moved from a bump allocator to a stack allocator.
+                ## Minor
+                1. Removed implicit addition for implicit multiplication continuation. 
+                1. Syntax overhaul to keep functionality but increase ease-of-parse.
+                ## Patch
+                1. Updated `README.md` to account for changes and the [new documentation](https://docs.abscissa.eu).
+                1. Unified compile scripts for assembly.
+                1. Moved from beta to stable in `pyproject.toml`.
+                1. Made *Rust* functions safe, with small unsafe blocks for wrappers and the allocator.
+                1. Renamed `bcalls` and `ncalls` to detail and lookup.
+                1. Renamed `sheet` to `start` and made it the entry point, delaying `level1`.
+                1. Moved changelog to the [new documentation](https://docs.abscissa.eu).
+                1. Removed testing until there's an integration with *Abscissa* for testing data.
+            </Accordion>
         </AccordionGroup>
     </Step>
 </Steps>

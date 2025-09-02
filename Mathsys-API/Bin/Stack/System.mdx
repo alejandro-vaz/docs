@@ -1,0 +1,45 @@
+---
+title: "System"
+description: "OS interactions."
+icon: "laptop-binary"
+iconType: "solid"
+---
+
+<RequestExample>
+```rust From main.rs
+stack::system::write(pointer);
+stack::system::exit(code);
+```
+```rust Elsewhere
+crate::stack::system::write(pointer);
+crate::stack::system::exit(code);
+```
+</RequestExample>
+
+## Implementation
+<CodeGroup dropdown>
+```rust system.rs lines expandable
+//
+//  IMPORTS
+//
+
+// IMPORTS -> BLOCK
+unsafe extern "C" {
+    fn systemWrite(pointer: *const u8) -> ();
+    fn systemExit(code: u8) -> !;
+}
+
+
+//
+//  WRAPPERS
+//
+
+// WRAPPERS -> WRITE
+#[inline(always)]
+pub fn write(pointer: *const u8) -> () {unsafe{systemWrite(pointer)}}
+
+// WRAPPERS -> EXIT
+#[inline(always)]
+pub fn exit(code: u8) -> ! {unsafe{systemExit(code)}}
+```
+</CodeGroup>

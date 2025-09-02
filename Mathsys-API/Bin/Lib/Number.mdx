@@ -1,0 +1,42 @@
+---
+title: "Number"
+description: "Tools for manipulating numbers."
+icon: "hashtag"
+iconType: "solid"
+---
+
+<RequestExample>
+```rust From main.rs
+number::scientific(number);
+```
+```rust Elsewhere
+crate::number::scientific(number);
+```
+</RequestExample>
+
+## Implementation
+<CodeGroup dropdown>
+```rust number.rs lines expandable
+//
+//  FORMATTING
+//
+
+// FORMATTING -> SCIENTIFIC
+pub fn scientific(number: usize) -> crate::String {
+    let k = 1_000;
+    let m = 1_000_000;
+    return if number < k {crate::format!(
+        "{:>6}", 
+        number
+    )} else if number < m {crate::format!(
+        "{:>3}.{}K",
+        number / k,
+        number % k / (k / 10)
+    )} else {crate::format!(
+        "{:>3}.{}M",
+        number / m,
+        number % m / (m / 10)
+    )}
+}
+```
+</CodeGroup>

@@ -1,0 +1,24 @@
+---
+title: "System"
+description: "OS interactions."
+icon: "laptop-binary"
+iconType: "solid"
+---
+
+<RequestExample>
+```rust From main.rs
+stack::system::write(pointer);
+stack::system::exit(code);
+```
+```rust Elsewhere
+crate::stack::system::write(pointer);
+crate::stack::system::exit(code);
+```
+</RequestExample>
+
+## Implementation
+<CodeGroup dropdown>
+```rust system.rs lines expandable
+https://raw.githubusercontent.com/alejandro-vaz/mathsys/main/python/mathsys/dev/bin/stack/system.rs
+```
+</CodeGroup>
