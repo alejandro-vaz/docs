@@ -1,0 +1,95 @@
+---
+title: "Exponentiation"
+description: "Learn about exponentiation in Mathsys - using carets as brackets for mathematical conciseness."
+icon: "arrow-up"
+iconType: "solid"
+---
+
+## Exponentiation Syntax
+
+Mathsys uses carets (`^`) for exponentiation, but unlike other programming languages, these carets act as **brackets** rather than operators. This design maintains mathematical conciseness and natural expression.
+
+### Basic Exponentiation
+
+```
+x^2^
+# x squared
+
+y^3^
+# y cubed
+
+z^n^
+# z to the power of n
+```
+
+### Syntax Rules
+
+The **first caret must be written directly next to the variable** with no spaces:
+
+```
+# Valid syntax
+x^2^
+variable^3^
+mass^2^
+
+# Invalid syntax
+x ^2^     # Error: space before first caret
+variable ^3^   # Error: space before first caret
+```
+
+### Natural Mathematical Expression
+
+This bracket-style notation allows for natural mathematical expressions without requiring parentheses:
+
+```
+x^y + 1^
+# Equivalent to x^(y+1)
+
+2x^2 + 3x + 1^
+# Equivalent to 2x^(2+3x+1)
+```
+
+### Complex Examples
+
+```
+# Variables in exponents
+base^exponent^
+# base raised to the power of exponent
+
+# Multiple operations
+x^y + z^
+# x^(y+z)
+
+# With Greek variables
+alpha^beta + gamma^
+# alpha^(beta+gamma)
+```
+
+### LaTeX Output
+
+When transpiled to LaTeX, exponentiation expressions produce proper mathematical notation:
+
+```
+x^2^
+```
+
+Transpiles to:
+
+$$x^{2}$$
+
+```tex
+\(x^{2}\)
+```
+
+```
+x^y + 1^
+```
+
+Transpiles to:
+
+$$x^{y+1}$$
+
+```tex
+\(x^{y+1}\)
+```
+
