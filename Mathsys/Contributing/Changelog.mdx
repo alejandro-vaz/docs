@@ -146,4 +146,42 @@ mode: "wide"
             </Accordion>
         </AccordionGroup>
     </Step>
+    <Step stepNumber="2">
+        <AccordionGroup>
+            <Accordion title="v2.1.5">
+                ## Major
+                1. Implemented *IR* parsing in the *Rust* runtime.
+                1. Added data implementations for all objects in *Rust.*
+                ## Minor
+                1. Removed data race issues from the stack allocator.
+                ## Patch
+                1. Improved `.gitignore` organisation.
+                1. Fixed typos in `README.md`.
+                1. Corrected email in `pyproject.toml`.
+                1. Total heap size message before runtime initialization now uses scientific notation.
+                1. Improved error handling in `builder.py`.
+                1. Moved limit to level four.
+                1. Refactored assembly build scripts.
+            </Accordion>
+        </AccordionGroup>
+    </Step>
+    <Step stepNumber="3">
+        <AccordionGroup>
+            <Accordion title="v3.3.1">
+                ## Major
+                1. Added runtime values with their own methods.
+                1. Created runtime context.
+                ## Minor
+                1. Added evaluation methods to classes.
+                1. Started processing the `Start` node.
+                1. Improved *IR* parsing in *Rust.*
+                1. Added `Value` downcasting in the *Rust* runtime.
+                ## Patch
+                1. Removed previous versions from `.gitignore`.
+                1. Fixed typos on `README.md`.
+                1. Added `memcmp()` function on `memory.rs`.
+                1. Simplified assembly folders, assembly will only be used for communicating with the system.
+            </Accordion>
+        </AccordionGroup>
+    </Step>
 </Steps>
