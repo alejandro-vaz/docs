@@ -9,14 +9,6 @@ iconType: "solid"
 
 **Mathsys** is a hybrid language that combines the clarity of mathematical notation with the power of computation. While LaTeX excels at typesetting mathematics, it cannot be reliably parsed or executed. Mathsys bridges this gap by providing a language that outputs beautiful LaTeX typesetting while remaining fully runnable and computable.
 
-### Key Features
-
-- **Natural mathematical syntax** - Write expressions like `2x + 3y` instead of `2 * x + 3 * y`
-- **Implicit multiplication** - Use spaces for multiplication (e.g., `2 3` instead of `2 * 3`)
-- **Mathematical precedence** - Follows standard mathematical order of operations
-- **Multiple language support** - Compiles to Python, TypeScript, and more
-- **Precise number handling** - Avoids floating-point precision issues
-
 ## Try Mathsys Online
 
 The easiest way to get started with Mathsys is through our live playground:
@@ -69,6 +61,22 @@ a * b + 1
 # Results in 7
 ```
 
+## LaTeX Output
+
+All Mathsys code is directly transpilable to LaTeX, producing beautiful mathematical typesetting:
+
+```
+2x^2^ + 3x + 1
+```
+
+Transpiles to:
+
+\(2x^{2}+3x+1\)
+
+```tex
+\(2x^{2}+3x+1\)
+```
+
 ## Why Mathsys?
 
 Traditional programming languages require you to translate mathematical concepts into their syntax. Mathsys lets you write mathematics naturally:
@@ -80,7 +88,7 @@ result = 2 * x**2 + 3 * x + 1
 
 **Mathsys:**
 ```
-2x² + 3x + 1
+2x^2^ + 3x + 1
 ```
 
 This makes Mathsys perfect for:
