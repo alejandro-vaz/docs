@@ -1,7 +1,7 @@
 ---
 title: "Variables"
 description: "Learn about variables in Mathsys - multicharacter names, declarations, and definitions."
-icon: "variable"
+icon: "hashtag"
 iconType: "solid"
 ---
 
@@ -111,54 +111,5 @@ x = 2
 x == x
 # x is now immutable with value 2
 ```
-
-## Practical Examples
-
-### Descriptive Variable Names
-
-```
-# Traditional math notation
-F = m * a
-
-# Mathsys with descriptive names
-force = mass * acceleration
-```
-
-### Mixed Mutable and Immutable Variables
-
-```
-# Constants (immutable)
-pi == 3.14159
-gravity == 9.81
-
-# Variables (mutable)
-position = 0
-velocity = 10
-time = 0
-
-# Calculate new position
-position = position + velocity * time
-```
-
-### Converting to Constants
-
-```
-# Start with mutable variables
-initialVelocity = 10
-acceleration = -2
-
-# Convert to immutable when values are finalized
-initialVelocity == initialVelocity
-acceleration == acceleration
-
-# Now they cannot be changed
-```
-
-## Benefits
-
-- **Clarity**: Descriptive names make mathematical expressions self-documenting
-- **Safety**: Immutable variables prevent accidental modifications
-- ****Flexibility**: Choose between mutable and immutable based on your needs
-- ****Maintainability**: Easier to understand and modify complex mathematical code
 
 Ready to explore more advanced concepts? Check out the [Vectors](/Mathsys/Learn/Vectors) guide next!
