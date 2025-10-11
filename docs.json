@@ -87,36 +87,12 @@
                 "tab": "Mathsys API",
                 "groups": [
                     {
-                        "group": "Bin",
+                        "group": "Context",
                         "pages": [
-                            {
-                                "group": "Lib",
-                                "pages": [
-                                    "/Mathsys-API/Bin/Lib/Allocator",
-                                    "/Mathsys-API/Bin/Lib/Memory",
-                                    "/Mathsys-API/Bin/Lib/Number",
-                                    "/Mathsys-API/Bin/Lib/Rustc",
-                                    "/Mathsys-API/Bin/Lib/Stdout"
-                                ]
-                            },
-                            {
-                                "group": "Stack",
-                                "pages": [
-                                    "/Mathsys-API/Bin/Stack/System"
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "group": "Source",
-                        "pages": [
-                            {
-                                "group": "System",
-                                "pages": [
-                                    "/Mathsys-API/Source/System/Exit",
-                                    "/Mathsys-API/Source/System/Write"
-                                ]
-                            }
+                            "/Mathsys-API/Context/_Infinity",
+                            "/Mathsys-API/Context/_Number",
+                            "/Mathsys-API/Context/_Undefined",
+                            "/Mathsys-API/Context/_Variable"
                         ]
                     }
                 ]
