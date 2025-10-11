@@ -67,6 +67,20 @@
                 "tab": "Mathsys",
                 "groups": [
                     {
+                        "group": "Learn",
+                        "pages": [
+                            "/Mathsys/Learn/Getting-started",
+                            "/Mathsys/Learn/Arithmetic",
+                            "/Mathsys/Learn/Variables",
+                            "/Mathsys/Learn/Exponentiation",
+                            "/Mathsys/Learn/Vectors",
+                            "/Mathsys/Learn/Infinite",
+                            "/Mathsys/Learn/Limits",
+                            "/Mathsys/Learn/Comments",
+                            "/Mathsys/Learn/Debug"
+                        ]
+                    },
+                    {
                         "group": "Contributing",
                         "pages": [
                             "/Mathsys/Contributing/Code-of-conduct",
