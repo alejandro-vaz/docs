@@ -1,0 +1,164 @@
+---
+title: "Variables"
+description: "Learn about variables in Mathsys - multicharacter names, declarations, and definitions."
+icon: "variable"
+iconType: "solid"
+---
+
+## Multicharacter Variables
+
+Unlike traditional mathematical notation, Mathsys supports **multicharacter variable names**. This design choice makes mathematical expressions more descriptive and readable, especially when working with complex formulas.
+
+Instead of using single letters like `m`, you can use descriptive names like `mass`:
+
+```
+mass = 10
+velocity = 5
+kineticEnergy = 0.5 * mass * velocity^2^
+```
+
+### Variable Naming Rules
+
+Variable names in Mathsys must follow the pattern `[a-zA-Z]+`, meaning:
+- **Only letters** (no numbers, underscores, or special characters)
+- **Use camelCase or PascalCase** for multi-word variables
+- **No underscores allowed**
+
+```
+# Valid variable names
+mass = 10
+velocity = 5
+kineticEnergy = 0.5 * mass * velocity^2^
+totalForce = mass * acceleration
+MaxValue = 100
+
+# Invalid variable names
+kinetic_energy = 10  # Error: underscores not allowed
+velocity2 = 5        # Error: numbers not allowed
+total-force = 10     # Error: hyphens not allowed
+```
+
+This approach is particularly powerful in computational mathematics where clarity and maintainability are crucial.
+
+## Greek Variables
+
+Mathsys supports Greek variable names that are automatically transpiled to proper Greek letters in LaTeX output:
+
+```
+alpha = 0.5
+beta = 1.2
+gamma = 2.0
+theta = pi / 4
+```
+
+When transpiled to LaTeX, these variables become:
+
+$$\alpha =0.5\\ \beta =1.2\\ \gamma =2.0\\ \theta =\frac\{\pi }{4}$$
+
+This makes mathematical expressions look natural and professional, just like traditional mathematical notation.
+
+## Variable Assignment
+
+Mathsys provides two distinct ways to assign values to variables:
+
+### Declaration (`=`)
+
+The **declaration** operator creates or modifies a **mutable** variable:
+
+```
+x = 3
+x = 5
+# x is now 5
+```
+
+Mutable variables can be reassigned multiple times throughout your code.
+
+### Definition (`==`)
+
+The **definition** operator creates an **immutable** variable:
+
+```
+x == 3
+# x is now permanently 3
+```
+
+Once defined with `==`, a variable cannot be reassigned:
+
+```
+x == 3
+x == 2
+# Error: cannot reassign immutable variable
+
+x == 3
+x = 2
+# Error: cannot reassign immutable variable
+```
+
+## Converting Mutable to Immutable
+
+You can convert a mutable variable to an immutable one:
+
+```
+x = 2
+x == 3
+# x is now immutable with value 3
+```
+
+You can even make a variable immutable while keeping its current value:
+
+```
+x = 2
+x == x
+# x is now immutable with value 2
+```
+
+## Practical Examples
+
+### Descriptive Variable Names
+
+```
+# Traditional math notation
+F = m * a
+
+# Mathsys with descriptive names
+force = mass * acceleration
+```
+
+### Mixed Mutable and Immutable Variables
+
+```
+# Constants (immutable)
+pi == 3.14159
+gravity == 9.81
+
+# Variables (mutable)
+position = 0
+velocity = 10
+time = 0
+
+# Calculate new position
+position = position + velocity * time
+```
+
+### Converting to Constants
+
+```
+# Start with mutable variables
+initialVelocity = 10
+acceleration = -2
+
+# Convert to immutable when values are finalized
+initialVelocity == initialVelocity
+acceleration == acceleration
+
+# Now they cannot be changed
+```
+
+## Benefits
+
+- **Clarity**: Descriptive names make mathematical expressions self-documenting
+- **Safety**: Immutable variables prevent accidental modifications
+- ****Flexibility**: Choose between mutable and immutable based on your needs
+- ****Maintainability**: Easier to understand and modify complex mathematical code
+
+Ready to explore more advanced concepts? Check out the [Vectors](/Mathsys/Learn/Vectors) guide next!
