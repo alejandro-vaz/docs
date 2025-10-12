@@ -1,0 +1,83 @@
+---
+title: "Limits"
+description: "Learn about limits in Mathsys - calculating limits with variable tending to values."
+icon: "chart-line"
+iconType: "solid"
+---
+
+## Limit Syntax
+
+Limits in Mathsys follow the mathematical notation `lim variable->value of expression`:
+
+```
+e == lim alpha->0 of (1 + 1/alpha)^alpha^
+# Euler's number as a limit
+```
+
+## Basic Structure
+
+A limit consists of three parts:
+
+1. **`lim`** - the limit keyword
+2. **`variable->value`** - the variable and what it tends to
+3. **`of (expression)`** - the expression being evaluated
+
+## Expression Requirements
+
+The expression in a limit **must always be enclosed in parentheses**:
+
+```
+# Valid
+result == lim n->inf of (1 + 1/n)^n^
+
+# Valid - even simple expressions need parentheses
+simple == lim x->2 of (x + 1)
+```
+
+The expression may or may not include exponents:
+
+```
+# With exponentiation
+e == lim alpha->0 of (1 + 1/alpha)^alpha^
+
+# Without exponentiation
+slope == lim h->0 of (((x + h)^2^ - x^2^) / h)
+```
+
+## Directional Limits
+
+Limits can specify the direction of approach using `+` or `-`:
+
+```
+# Approaching from the right (positive direction)
+value == lim x->0+ of (1 / x)
+# This limit is defined to be infinity
+
+# Approaching from the left (negative direction)
+leftLimit == lim x->0- of (1 / x)
+# This limit is defined to be negative infinity
+```
+
+## Common Limit Examples
+
+```
+# Fundamental limits
+e == lim n->inf of (1 + 1/n)^n^
+# Euler's number
+
+# Polynomial limits
+polyLimit == lim x->2 of (x^2^ + 3x - 1)
+# Direct substitution: 4 + 6 - 1 = 9
+
+# Infinity limits
+infLimit == lim x->inf of (1 / x)
+# Equal to 0
+```
+## Mathematical Applications
+
+Limits are essential for:
+
+- **Calculus** - derivatives and integrals
+- **Analysis** - continuity and convergence
+- **Series** - infinite sums and sequences
+- **Asymptotic behavior** - understanding function behavior at boundaries
