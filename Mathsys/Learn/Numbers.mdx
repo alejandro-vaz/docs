@@ -13,43 +13,63 @@ Mathsys supports two basic number types:
 
 Whole numbers without decimal points:
 
-```
-1
-42
--10
-1000
-```
+<CodeGroup dropdown>
+    ```mathsys Integers.msd
+    1
+    42
+    -10
+    1000
+    ```
+    ```tex Integers.ltx
+    1\\ 42\\ -10\\ 1000
+    ```
+</CodeGroup>
 
 ### Floating-Point Numbers
 
 Numbers with decimal points:
 
-```
-3.14
-2.5
--0.5
-100.0
-```
+<CodeGroup dropdown>
+    ```mathsys FloatingPoint.msd
+    3.14
+    2.5
+    -0.5
+    100.0
+    ```
+    ```tex FloatingPoint.ltx
+    3.14\\ 2.5\\ -0.5\\ 100.0
+    ```
+</CodeGroup>
 
 ## Usage
 
 Numbers can be used directly in expressions:
 
-```
-1 + 2
-# Results in 3
+<CodeGroup dropdown>
+    ```mathsys Expressions.msd
+    1 + 2
+    # Results in 3
 
-3.14 * 2
-# Results in 6.28
+    3.14 * 2
+    # Results in 6.28
 
-10 / 3
-# Results in 3.333...
-```
+    10 / 3
+    # Results in 3.333...
+    ```
+    ```tex Expressions.ltx
+    1+2\\ \\\text{Results in 3}\\ 3.14\cdot 2\\ \\\text{Results in 6.28}\\ \frac{10}{3}\\ \\\text{Results in 3.333...}
+    ```
+</CodeGroup>
 
 Numbers can be assigned to variables:
 
-```
-radius = 5.5
-area = 3.14 * radius^2^
-```
+<CodeGroup dropdown>
+    ```mathsys Variables.msd
+    radius = 5.5
+    area = 3.14 * radius^2^
+    ```
+    ```tex Variables.ltx
+    radius=5.5\\ area=3.14radius^{2}
+    ```
+</CodeGroup>
 

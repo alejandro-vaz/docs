@@ -11,11 +11,16 @@ Unlike traditional mathematical notation, Mathsys supports **multicharacter vari
 
 Instead of using single letters like `m`, you can use descriptive names like `mass`:
 
-```
-mass = 10
-velocity = 5
-kineticEnergy = 0.5 * mass * velocity^2^
-```
+<CodeGroup dropdown>
+    ```mathsys Multicharacter.msd
+    mass = 10
+    velocity = 5
+    kineticEnergy = 0.5 * mass * velocity^2^
+    ```
+    ```tex Multicharacter.ltx
+    mass=10\\ velocity=5\\ kineticEnergy=0.5mass\cdot velocity^{2}
+    ```
+</CodeGroup>
 
 ### Variable Naming Rules
 
@@ -24,19 +29,24 @@ Variable names in Mathsys must follow the pattern `[a-zA-Z]+`, meaning:
 - **Use camelCase or PascalCase** for multi-word variables
 - **No underscores allowed**
 
-```
-# Valid variable names
-mass = 10
-velocity = 5
-kineticEnergy = 0.5 * mass * velocity^2^
-totalForce = mass * acceleration
-MaxValue = 100
+<CodeGroup dropdown>
+    ```mathsys NamingRules.msd
+    # Valid variable names
+    mass = 10
+    velocity = 5
+    kineticEnergy = 0.5 * mass * velocity^2^
+    totalForce = mass * acceleration
+    MaxValue = 100
 
-# Invalid variable names
-kinetic_energy = 10  # Error: underscores not allowed
-velocity2 = 5        # Error: numbers not allowed
-total-force = 10     # Error: hyphens not allowed
-```
+    # Invalid variable names
+    kinetic_energy = 10  # Error: underscores not allowed
+    velocity2 = 5        # Error: numbers not allowed
+    total-force = 10     # Error: hyphens not allowed
+    ```
+    ```tex NamingRules.ltx
+    \\\text{Valid variable names}\\ mass=10\\ velocity=5\\ kineticEnergy=0.5mass\cdot velocity^{2}\\ totalForce=mass\cdot acceleration\\ MaxValue=100\\ \\\text{Invalid variable names}\\ \\\text{kinetic_energy = 10}\\ \\\text{velocity2 = 5}\\ \\\text{total-force = 10}
+    ```
+</CodeGroup>
 
 This approach is particularly powerful in computational mathematics where clarity and maintainability are crucial.
 
@@ -44,16 +54,23 @@ This approach is particularly powerful in computational mathematics where clarit
 
 Mathsys supports Greek variable names that are automatically transpiled to proper Greek letters in LaTeX output:
 
-```
-alpha = 0.5
-beta = 1.2
-gamma = 2.0
-theta = pi / 4
-```
+<CodeGroup dropdown>
+    ```mathsys GreekVariables.msd
+    alpha = 0.5
+    beta = 1.2
+    gamma = 2.0
+    theta = pi / 4
+    ```
+    ```tex GreekVariables.ltx
+    \alpha =0.5\\ \beta =1.2\\ \gamma =2.0\\ \theta =\frac{\pi }{4}
+    ```
+</CodeGroup>
 
 When transpiled to LaTeX, these variables become:
 
-$$\alpha =0.5\\ \beta =1.2\\ \gamma =2.0\\ \theta =\frac{\pi }{4}$$
+$$
+\alpha =0.5\\ \beta =1.2\\ \gamma =2.0\\ \theta =\frac{\pi }{4}
+$$
 
 This makes mathematical expressions look natural and professional, just like traditional mathematical notation.
 
@@ -65,11 +82,16 @@ Mathsys provides two distinct ways to assign values to variables:
 
 The **declaration** operator creates or modifies a **mutable** variable:
 
-```
-x = 3
-x = 5
-# x is now 5
-```
+<CodeGroup dropdown>
+    ```mathsys Declaration.msd
+    x = 3
+    x = 5
+    # x is now 5
+    ```
+    ```tex Declaration.ltx
+    x=3\\ x=5\\ \\\text{x is now 5}
+    ```
+</CodeGroup>
 
 Mutable variables can be reassigned multiple times throughout your code.
 
@@ -77,38 +99,58 @@ Mutable variables can be reassigned multiple times throughout your code.
 
 The **definition** operator creates an **immutable** variable:
 
-```
-x == 3
-# x is now permanently 3
-```
+<CodeGroup dropdown>
+    ```mathsys Definition.msd
+    x == 3
+    # x is now permanently 3
+    ```
+    ```tex Definition.ltx
+    x\equiv 3\\ \\\text{x is now permanently 3}
+    ```
+</CodeGroup>
 
 Once defined with `==`, a variable cannot be reassigned:
 
-```
-x == 3
-x == 2
-# Error: cannot reassign immutable variable
-
-x == 3
-x = 2
-# Error: cannot reassign immutable variable
-```
+<CodeGroup dropdown>
+    ```mathsys ImmutableError.msd
+    x == 3
+    # x == 2
+    # Error: cannot reassign immutable variable
+    # or
+    # x == 3
+    # x = 2
+    # Error: cannot reassign immutable variable
+    ```
+    ```tex ImmutableError.ltx
+    x\equiv 3\\ \\\text{x == 2}\\ \\\text{Error: cannot reassign immutable variable}\\ \\\text{or}\\ \\\text{x == 3}\\ \\\text{x = 2}\\ \\\text{Error: cannot reassign immutable variable}
+    ```
+</CodeGroup>
 
 ## Converting Mutable to Immutable
 
 You can convert a mutable variable to an immutable one:
 
-```
-x = 2
-x == 3
-# x is now immutable with value 3
-```
+<CodeGroup dropdown>
+    ```mathsys ConvertMutable.msd
+    x = 2
+    x == 3
+    # x is now immutable with value 3
+    ```
+    ```tex ConvertMutable.ltx
+    x=2\\ x\equiv 3\\ \\\text{x is now immutable with value 3}
+    ```
+</CodeGroup>
 
 You can even make a variable immutable while keeping its current value:
 
-```
-x = 2
-x == x
-# x is now immutable with value 2
-```
+<CodeGroup dropdown>
+    ```mathsys KeepValue.msd
+    x = 2
+    x == x
+    # x is now immutable with value 2
+    ```
+    ```tex KeepValue.ltx
+    x=2\\ x\equiv x\\ \\\text{x is now immutable with value 2}
+    ```
+</CodeGroup>
 
