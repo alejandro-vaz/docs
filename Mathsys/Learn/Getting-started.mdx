@@ -43,11 +43,6 @@ Mathsys supports standard arithmetic operations:
         # Results in 5
         ```
     </Tab>
-    <Tab title="Output">
-        $$
-        1+2\\ \\\text{Results in 3}\\ 10-3\\ \\\text{Results in 7}\\ 4\cdot 5\\ \\\text{Results in 20}\\ \frac{15}{3}\\ \\\text{Results in 5}
-        $$
-    </Tab>
     <Tab title="LaTeX">
         ```tex
         1+2\\ \\\text{Results in 3}\\ 10-3\\ \\\text{Results in 7}\\ 4\cdot 5\\ \\\text{Results in 20}\\ \frac{15}{3}\\ \\\text{Results in 5}
@@ -59,51 +54,64 @@ Mathsys supports standard arithmetic operations:
 
 You can assign values to variables using `=`:
 
-```
-x = 5
-y = 3
-x + y
-# Results in 8
-```
+<Tabs>
+    <Tab title="Mathsys">
+        ```
+        x = 5
+        y = 3
+        x + y
+        # Results in 8
+        ```
+    </Tab>
+    <Tab title="LaTeX">
+        ```tex
+        x=5\\ y=3\\ x+y\\ \\\text{Results in 8}
+        ```
+    </Tab>
+</Tabs>
 
 Variables can be used in expressions just like numbers:
 
-```
-a = 2
-b = 3
-a * b + 1
-# Results in 7
-```
+<Tabs>
+    <Tab title="Mathsys">
+        ```
+        a = 2
+        b = 3
+        a * b + 1
+        # Results in 7
+        ```
+    </Tab>
+    <Tab title="LaTeX">
+        ```tex
+        a=2\\ b=3\\ a\cdot b+1\\ \\\text{Results in 7}
+        ```
+    </Tab>
+</Tabs>
 
 ## LaTeX Output
 
 All Mathsys code is directly transpilable to LaTeX, producing beautiful mathematical typesetting:
 
-```
-2x^2^ + 3x + 1
-```
+<Tabs>
+    <Tab title="Mathsys">
+        ```
+        2x^2^ + 3x + 1
+        ```
+    </Tab>
+    <Tab title="LaTeX">
+        ```tex
+        2x^{2}+3x+1
+        ```
+    </Tab>
+</Tabs>
 
 Transpiles to:
 
 $$2x^{2}+3x+1$$
 
-```tex
-\(2x^{2}+3x+1\)
-```
-
 ## Why Mathsys?
 
-Traditional programming languages require you to translate mathematical concepts into their syntax. Mathsys lets you write mathematics naturally:
-
-**Traditional programming:**
-```python
-result = 2 * x**2 + 3 * x + 1
-```
-
-**Mathsys:**
-```
-2x^2^ + 3x + 1
-```
+Traditional programming languages require you to translate mathematical concepts into their syntax. Mathsys lets you write mathematics naturally.
 
 This makes Mathsys perfect for:
 - Mathematical modeling
