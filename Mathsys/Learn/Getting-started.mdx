@@ -28,7 +28,7 @@ For local development, see the installation instructions in the [Mathsys reposit
 Mathsys supports standard arithmetic operations:
 
 <CodeGroup dropdown>
-    ```mathsys
+    ```mathsys ArithmeticOperations.msd
     1 + 2
     # Results in 3
 
@@ -41,7 +41,7 @@ Mathsys supports standard arithmetic operations:
     15 / 3
     # Results in 5
     ```
-    ```tex
+    ```tex ArithmeticsOperations.ltx
     1+2\\ \\\text{Results in 3}\\ 10-3\\ \\\text{Results in 7}\\ 4\cdot 5\\ \\\text{Results in 20}\\ \frac{15}{3}\\ \\\text{Results in 5}
     ```
 </CodeGroup>
@@ -50,56 +50,44 @@ Mathsys supports standard arithmetic operations:
 
 You can assign values to variables using `=`:
 
-<Tabs>
-    <Tab title="Mathsys">
-        ```
-        x = 5
-        y = 3
-        x + y
-        # Results in 8
-        ```
-    </Tab>
-    <Tab title="LaTeX">
-        ```tex
-        x=5\\ y=3\\ x+y\\ \\\text{Results in 8}
-        ```
-    </Tab>
-</Tabs>
+<CodeGroup dropdown>
+    ```mathsys VariableAssignment.msd
+    x = 5
+    y = 3
+    x + y
+    # Results in 8
+    ```
+    ```tex VariableAssignment.ltx
+    x=5\\ y=3\\ x+y\\ \\\text{Results in 8}
+    ```
+</CodeGroup>
 
 Variables can be used in expressions just like numbers:
 
-<Tabs>
-    <Tab title="Mathsys">
-        ```
-        a = 2
-        b = 3
-        a * b + 1
-        # Results in 7
-        ```
-    </Tab>
-    <Tab title="LaTeX">
-        ```tex
-        a=2\\ b=3\\ a\cdot b+1\\ \\\text{Results in 7}
-        ```
-    </Tab>
-</Tabs>
+<CodeGroup dropdown>
+    ```mathsys ExpressionsOnVariables.msd
+    a = 2
+    b = 3
+    a * b + 1
+    # Results in 7
+    ```
+    ```tex ExpressionsOnVariables.ltx
+    a=2\\ b=3\\ a\cdot b+1\\ \\\text{Results in 7}
+    ```
+</CodeGroup>
 
 ## LaTeX Output
 
 All Mathsys code is directly transpilable to LaTeX, producing beautiful mathematical typesetting:
 
-<Tabs>
-    <Tab title="Mathsys">
-        ```
-        2x^2^ + 3x + 1
-        ```
-    </Tab>
-    <Tab title="LaTeX">
-        ```tex
-        2x^{2}+3x+1
-        ```
-    </Tab>
-</Tabs>
+<CodeGroup dropdown>
+    ```mathsys ExpressionsOnVariables.msd
+    2x^2^ + 3x + 1
+    ```
+    ```tex VariableAssignment.ltx
+    2x^{2}+3x+1
+    ```
+</CodeGroup>
 
 Transpiles to:
 
