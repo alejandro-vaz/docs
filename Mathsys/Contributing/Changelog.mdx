@@ -182,6 +182,117 @@ mode: "wide"
                 1. Added `memcmp()` function on `memory.rs`.
                 1. Simplified assembly folders, assembly will only be used for communicating with the system.
             </Accordion>
+            <Accordion title="v3.5.4">
+                ## Major
+                1. Changed *LaTeX* transpiler to be dataclass-based instead of having a string buffer.
+                ## Minor
+                1. Improved comment syntax.1
+                1. Added file extension based compiling.
+                1. Optimized runtime and added variable assignments.
+                ## Patch
+                1. Fixed grammar and syntax in `README.md`.
+                1. Added version and version info to exports.
+                1. Merged `rustc.rs` and `memory.rs`.
+            </Accordion>
+            <Accordion title="v3.7.0">
+                ## Major
+                1. Implemented caching with `lru_cache` and hashing inputs.
+                ## Minor
+                1. Added `_Nexists` runtime value.
+                ## Patch
+                1. Added compile-time indicator for *Python* targets.
+                1. Removed `#debug`.
+                1. Added exit codes enum for runtime.
+                1. Enhanced runtime verbose.
+                1. Removed anti-verbosing `settings.detail` and `.lookup`.
+                1. Updated error handling in builder.
+                1. Fixed separation of variables with `inf`.
+                1. Fixed extra newlines at document start.
+                1. Added keywords to class constructors in `parser.py`.
+            </Accordion>
+            <Accordion title="v3.7.40">
+                ## Minor
+                1. Fixed `lru_cache` and added cache managing utils.
+                1. Improved context `id` and added `equiv` function.
+                1. Added runtime code for `Equation`.
+                ## Patch
+                1. Improved error handling.
+                1. Removed watch command.
+                1. Added negative property to `_Number`.
+                1. Removed mutable downcast function.
+                1. Changed context runtime so that `Start` must be the last item.
+                1. Alert stdout print is now orange instead of yellowish.
+                1. Added support for multicharacter greek words.
+                1. Added `º`, `$` and `%` characters as valid for variables.
+            </Accordion>
+            <Accordion title="v3.9.10">
+                ## Major
+                1. Added summation method to runtime values.
+                1. Switched to bitmap allocator.
+                ## Minor
+                1. Streamlined locales and genlocales in runtime values.
+                1. Developed Expression data structure.
+                1. Added new environment variables to control runtime.
+                ## Patch
+                1. Changed catch-all from match clauses from `_` to `other`.
+                1. Fixed exception handling.
+                1. Updated `README.md` wording.
+                1. Added mutable downcasting.
+                1. Added empty parenthesis for a `_Nexists` value.
+            </Accordion>
+            <Accordion title="v3.9.16">
+                ## Patch
+                1. Added size limit for `lru_cache`.
+                1. Added info method to context values in runtime.
+                1. Fixed addition methods.
+                1. Trimmed down allocator.
+            </Accordion>
+            <Accordion title="v3.10.6">
+                ## Major
+                1. Added strong typing in syntax, parser, *LaTeX,* *IR,* and throughout the runtime.
+                ## Minor
+                1. Added tensor runtime value.
+                1. Added annotation `level1` structure.
+                ## Patch
+                1. Renamed vector to tensor.
+                1. Renamed `_Infinity` to `Infinite` in context.
+                1. Renamed all context classes to have no underscore but data ones to have.
+                1. Removed all downcasting in favor of mutcasting.
+                1. Fixed Greek letters collision.
+                1. Removed `(frozen = True)` dataclasses.
+            </Accordion>
+            <Accordion title="v3.12.1">
+                ## Major
+                1. Added type system in runtime.
+                2. Added standard library and `use` keyword.
+                ## Minor
+                1. Restructured `data/*.rs` files to improve logs.
+                ## Patch
+                1. Fixed `equiv` and `summation` methods in context values.
+                2. Added modulus method for tensor.
+                3. Moved memory usage tracking to left.
+            </Accordion>
+        </AccordionGroup>
+    </Step>
+    <Step stepNumber="4">
+        <AccordionGroup>
+            <Accordion title="v4.2.0">
+                ## Major
+                1. Optimized *Python* parsing workflow.
+                1. Moved to a *Rust* standard runtime with the usual global allocator, so marks were removed.
+                ## Minor
+                1. Added `tokens()` target.
+                1. Expanded runtime values adding `unequivalency()`.
+                1. Expanded runtime values adding `multiplication()`.
+                1. Expanded runtime values adding `negate()` and `invert()`.
+                1. Streamlined runtime debugging with display and debug implementations.
+                1. Added `partial()` and `result()` methods with `chore()` and `class()` outputs.
+                1. Refactored `converter.rs`.
+                1. Added *IR* deduplication.
+                ## Patch
+                1. Standardized variable names.
+                1. Expanded `stdout` functions to allow for any printable input.
+            </Accordion>
         </AccordionGroup>
     </Step>
 </Steps>
