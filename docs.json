@@ -43,27 +43,6 @@
     "navigation": {
         "tabs": [
             {
-                "tab": "Abscissa",
-                "groups": [
-                    {
-                        "group": "Contributing",
-                        "pages": [
-                            "/Abscissa/Contributing/Code-of-conduct",
-                            "/Abscissa/Contributing/Process",
-                            "/Abscissa/Contributing/Security",
-                            "/Abscissa/Contributing/Changelog"
-                        ]
-                    },
-                    {
-                        "group": "Legal",
-                        "pages": [
-                            "/Abscissa/Legal/Privacy-policy",
-                            "/Abscissa/Legal/License"
-                        ]
-                    }
-                ]
-            },
-            {
                 "tab": "Mathsys",
                 "groups": [
                     {
@@ -79,21 +58,6 @@
                             "/Mathsys/Learn/Limits",
                             "/Mathsys/Learn/Comments",
                             "/Mathsys/Learn/Debug"
-                        ]
-                    },
-                    {
-                        "group": "Contributing",
-                        "pages": [
-                            "/Mathsys/Contributing/Code-of-conduct",
-                            "/Mathsys/Contributing/Process",
-                            "/Mathsys/Contributing/Security",
-                            "/Mathsys/Contributing/Changelog"
-                        ]
-                    },
-                    {
-                        "group": "Legal",
-                        "pages": [
-                            "/Mathsys/Legal/License"
                         ]
                     }
                 ]
@@ -147,11 +111,7 @@
         }
     },
     "contextual": {
-        "options": [
-         "chatgpt",
-         "claude",
-         "copy"
-     ]
+        "options": ["copy"]
     },
     "footer": {
         "socials": {
