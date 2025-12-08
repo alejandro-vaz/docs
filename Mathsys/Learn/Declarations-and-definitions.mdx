@@ -1,0 +1,74 @@
+---
+title: "Declarations and definitions"
+description: "Learn how declare and define variables."
+icon: "equals"
+iconType: "solid"
+---
+
+## Declarations
+
+Declarations let you assign a value to a variable:
+
+```ms3
+x = 2
+
+var = 25
+
+y = x^2^ - 6x + 2
+```
+
+The syntax is: `{var name} = {expression}`
+
+This makes the variable have the same value as the evaluated expression on the right.
+
+It allows for reassignment later on (mutable variable):
+
+```ms3
+# first assignment
+x = 2
+
+# second assignment
+x = 3
+
+# perfectly valid!
+
+y = x
+# y now resolves to 3
+```
+
+## Definitions
+
+Definitions act exactly the same as declarations, but once the variable is assigned the value, the variable becomes immutable and it cannot be changed.
+
+The syntax is: `{var name} == {expression}`
+
+```ms3
+n == 6.62
+
+# n cannot be changed anymore
+
+# error
+n == 4
+
+# error
+n = 3
+
+# but it still can be used and even moved
+n * 7 
+
+b = n
+b = 3
+# valid!
+```
+
+## Locking
+
+Locking is the practice of making a mutable variable, immutable. It is done by:
+
+```ms3
+# initial assignment
+x = 3
+
+# locking
+x == x
+```

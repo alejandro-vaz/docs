@@ -49,29 +49,12 @@
                         "group": "Learn",
                         "pages": [
                             "/Mathsys/Learn/Getting-started",
-                            "/Mathsys/Learn/Arithmetic",
-                            "/Mathsys/Learn/Numbers",
-                            "/Mathsys/Learn/Variables",
+                            "/Mathsys/Learn/Addition-and-subtraction",
+                            "/Mathsys/Learn/Multiplication-and-division",
                             "/Mathsys/Learn/Exponentiation",
-                            "/Mathsys/Learn/Vectors",
-                            "/Mathsys/Learn/Infinite",
-                            "/Mathsys/Learn/Limits",
-                            "/Mathsys/Learn/Comments",
-                            "/Mathsys/Learn/Debug"
-                        ]
-                    }
-                ]
-            },
-            {
-                "tab": "Mathsys API",
-                "groups": [
-                    {
-                        "group": "Context",
-                        "pages": [
-                            "/Mathsys-API/Context/_Infinity",
-                            "/Mathsys-API/Context/_Number",
-                            "/Mathsys-API/Context/_Undefined",
-                            "/Mathsys-API/Context/_Variable"
+                            "/Mathsys/Learn/Declarations-and-definitions",
+                            "/Mathsys/Learn/Variables",
+                            "/Mathsys/Learn/Infinite"
                         ]
                     }
                 ]

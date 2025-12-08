@@ -1,0 +1,72 @@
+---
+title: "Multiplication and division"
+description: "How to multiply and divide in Mathsys"
+icon: "xmark"
+iconType: "solid"
+---
+
+## Usage
+
+Multiplication in Mathsys is straightforward with the `*` operator:
+
+```ms3
+12 * 13
+
+6 * 7
+```
+
+Division is also available with the `/` operator:
+
+```ms3
+4 / 3
+
+2 / 9
+```
+
+You can combine them both in an expression:
+
+```ms3
+2 * 3 / 5
+
+6 * 7 / 11
+
+6 / 7 * 4
+```
+
+and operator precedence is respected with summation and subtraction:
+
+```ms3
+1 + 1 / 5
+```
+
+## Implicit multiplication
+
+Multiplication is also available implicitly, without needing to write the operator each time:
+
+```ms3
+12x
+
+6 - 4y
+
+4 3
+```
+
+A space is not required between variables and numbers.
+
+## Fraction carryover
+
+Fraction carryover is the property that allows you to maintain the position on a fraction when relying on implicit multiplication. It means that whenever `*` is used, the position is reset to numerator, but if implicif multiplication is used, the position is inherited from the previous element:
+
+```ms3
+# this is three times y
+3y
+
+# this is one over (two x)
+1 / 2x
+
+# this is six over (seven times eight)
+6 / 7 8
+
+# this is one half times four
+1 / 2*4
+```

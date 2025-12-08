@@ -17,91 +17,57 @@ The easiest way to get started with Mathsys is through our live playground:
 
 This interactive environment lets you write and run Mathsys code directly in your browser without any installation.
 
-### Local Installation
-
-For local development, see the installation instructions in the [Mathsys repository README](https://github.com/alejandro-vaz/mathsys).
-
-### File Extensions
+## File Extensions
 
 Mathsys uses version-specific file extensions:
 
-- **`.msd`** - Mathsys dev version (latest development)
-- **`.ms1`** - Mathsys 1
-- **`.ms2`** - Mathsys 2
-- **`.ms3`** - Mathsys 3
+- **`.ms1`** - Mathsys v1
+- **`.ms2`** - Mathsys v2
+- **`.ms3`** - Mathsys v3
+- **`.msd`** - Mathsys dev version (latest deployment)
 - And so on for future versions...
 
 When creating new Mathsys files, use `.msd` for the latest development version or the appropriate version-specific extension. The development version isn't always stable and is changing all the time, for more stability, choose a numbered file extension.
 
+The following Learn Mathsys guide is especifically designed for Mathsys `v3.12.1`.
+
 ## Syntax
 
-### Basic Arithmetic
+Mathsys syntax is designed to be expressive, high-density and intuitive. Here are some examples.
 
-Mathsys supports standard arithmetic operations:
+```ms3
+1 + 2
+# Results in 3
 
-<CodeGroup dropdown>
-    ```mathsys ArithmeticOperations.msd
-    1 + 2
-    # Results in 3
+10 - 3
+# Results in 7
 
-    10 - 3
-    # Results in 7
+4 * 5
+# Results in 20
 
-    4 * 5
-    # Results in 20
+15 / 3
+# Results in 5
+```
 
-    15 / 3
-    # Results in 5
-    ```
-    ```tex ArithmeticOperations.ltx
-    1+2\\ \\\text{Results in 3}\\ 10-3\\ \\\text{Results in 7}\\ 4\cdot 5\\ \\\text{Results in 20}\\ \frac{15}{3}\\ \\\text{Results in 5}
-    ```
-</CodeGroup>
+```ms3
+x = 5
+y = 3
 
-### Variables
+x + y
+# Results in 8
+```
 
-You can assign values to variables using `=`:
-
-<CodeGroup dropdown>
-    ```mathsys VariableAssignment.msd
-    x = 5
-    y = 3
-    x + y
-    # Results in 8
-    ```
-    ```tex VariableAssignment.ltx
-    x=5\\ y=3\\ x+y\\ \\\text{Results in 8}
-    ```
-</CodeGroup>
-
-Variables can be used in expressions just like numbers:
-
-<CodeGroup dropdown>
-    ```mathsys ExpressionsAndVariables.msd
-    a = 2
-    b = 3
-    a * b + 1
-    # Results in 7
-    ```
-    ```tex ExpressionsAndVariables.ltx
-    a=2\\ b=3\\ a\cdot b+1\\ \\\text{Results in 7}
-    ```
-</CodeGroup>
+In this guide you'll learn the syntax with it's caveats and quirks.
 
 ## LaTeX Output
 
-All Mathsys code is directly transpilable to LaTeX, producing beautiful mathematical typesetting:
+All Mathsys code is directly transpilable to LaTeX, producing beautiful mathematical typesetting. For example:
 
-<CodeGroup dropdown>
-    ```mathsys TranspilationExample.msd
-    2x^2^ + 3x + 1
-    ```
-    ```tex TranspilationExample.ltx
-    2x^{2}+3x+1
-    ```
-</CodeGroup>
+```ms3
+2x^2^ + 3x + 1
+```
 
-Transpiles to:
+Is rendered as:
 
 $$
 2x^{2}+3x+1
@@ -109,11 +75,69 @@ $$
 
 ## Why Mathsys?
 
-Traditional programming languages require you to translate mathematical concepts into their syntax. Mathsys lets you write mathematics naturally.
+Mathsys is designed for teaching mathematics digitally in a way that feels natural, intuitive, and directly computable. Students can write mathematics just as they think about it, while teachers get an environment where mathematical expressions are immediately runnable.
 
-This makes Mathsys perfect for:
-- Mathematical modeling
-- Scientific computing
-- Educational purposes
-- Prototyping mathematical algorithms
+## Formal reference
 
+Mathsys formal syntax, as of this version, is the following:
+
+```ebnf
+start: (_S | _L)* (level1 _S? (_L+ level1)*)? (_S | _L)*
+
+declaration: (OBJECT _S)? variable _S? _EQUALITY _S?  expression
+definition: (OBJECT _S)? variable _S? _BINDING _S? expression
+annotation: OBJECT _S variable
+node: expression
+equation: expression _S? _EQUALITY _S? expression
+comment: _COMMAND _S? QUOTE?
+use: _USE _S MODULE
+
+expression: (SIGNS _S?)? level3 (_S? SIGNS _S? level3)*
+
+term: level4 ((_S? OPERATOR)? _S? level4)*
+
+factor: level5 (_EXPONENTIATION _S? expression _S? _EXPONENTIATION)?
+limit: _LIM _S variable _S? _TO _S? expression SIGN? _S _OF _S nest (_EXPONENTIATION _S? expression _S? _EXPONENTIATION)?
+
+variable: IDENTIFIER
+infinite: _INF
+nest: _OPEN _S? expression? _S? _CLOSE
+tensor: _ENTER _S? (expression (_S? _COMMA _S? expression)* _S?)? _EXIT
+number: NUMBER (_DOT NUMBER)?
+
+
+level1: (declaration | definition | annotation | node | equation | comment | use)
+level2: (expression)
+level3: (term)
+level4: (factor | limit)
+level5: (variable | infinite | nest | tensor | number)
+
+
+_LIM: /\blim\b/
+_TO: /->/
+_OF: /\bof\b/
+_USE: /\buse\b/
+_COMMAND: /\#/
+QUOTE: /[^\n]+/
+MODULE: /[a-z]+/
+OBJECT: /\b(Any|Infinite|Nexists|Number|Tensor|Undefined|Variable)\b/
+IDENTIFIER: /(?i)(?!\b(?:inf|of|use|lim|Any|Infinite|Nexists|Number|Tensor|Undefined|Variable)\b)[A-Za-zº$%]+/
+_INF: /\binf\b/
+_EXPONENTIATION: /\^/
+NUMBER: /[0-9]+/
+_DOT: /\./
+_BINDING: /==/
+_EQUALITY: /=/
+OPERATOR: /[\*\/]/
+SIGNS: /[+-]+(\s*[+-]+)*/
+SIGN: /[+-]/
+_OPEN: /\(/
+_CLOSE: /\)/
+_ENTER: /\[/
+_COMMA: /,/
+_EXIT: /\]/
+_S: / +/
+_L: /\n/
+```
+
+This is public and intended so that users can understand better how to write Mathsys files.
