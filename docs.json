@@ -56,7 +56,10 @@
                             "/Mathsys/Learn/Variables",
                             "/Mathsys/Learn/Infinite",
                             "/Mathsys/Learn/Tensors",
-                            "/Mathsys/Learn/Type-declarations"
+                            "/Mathsys/Learn/Type-declarations",
+                            "/Mathsys/Learn/Limits",
+                            "/Mathsys/Learn/Comments",
+                            "/Mathsys/Learn/Modules"
                         ]
                     }
                 ]

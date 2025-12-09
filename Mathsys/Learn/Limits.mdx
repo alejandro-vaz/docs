@@ -1,0 +1,35 @@
+---
+title: "Limits"
+description: "Learn how to type limits."
+icon: "arrow-right"
+iconType: "solid"
+---
+
+## Usage
+
+Limits in Mathsys have the following syntax:
+
+```ebnf
+lim {var name} -> {expression}{sign?} of ({expression})
+```
+
+like this one
+
+```ms3
+e == lim n->inf of (1 + 1 / n)^n^
+```
+
+## Signed limits
+
+Signed limits have their expression followed by a sign (either `+` or `-`):
+
+```ms3
+lim x->0+ of (1 / x)
+# results in inf
+
+lim x->0- of (1 / x)
+# results in -inf
+
+lim x->0 of (1 / x)
+# results in undefined
+```
