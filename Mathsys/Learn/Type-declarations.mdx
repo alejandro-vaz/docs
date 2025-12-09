@@ -1,0 +1,43 @@
+---
+title: "Type declarations"
+description: "Learn how to specify the types of values."
+icon: "typewriter"
+iconType: "solid"
+---
+
+## Usage
+
+Type declarations allows you to specify the types of variables in Mathsys. There are two ways to do so: via annotations or via declarations and definitions.
+
+## Declarations and definitions
+
+You can annotate the type of a variable when declaring or defining it:
+
+```ms3
+# Tensor
+Tensor v = []
+
+# Infinite
+Infinite x = inf
+
+# No type
+Any t = x
+```
+
+Once a type is assigned to a variable, it cannot be unassigned or changed. See the formal syntax for all type declarations possible.
+
+## Annotations
+
+Annotations let you define the type of a variable without giving it a value. The syntax is as follows:
+
+```ms3
+# Annotation
+Tensor u, v
+
+# do whatever
+u*v
+```
+
+## LaTeX
+
+Type declarations and annotations modify LaTeX output with special formatting in order to distinguish types.

@@ -55,7 +55,8 @@
                             "/Mathsys/Learn/Declarations-and-definitions",
                             "/Mathsys/Learn/Variables",
                             "/Mathsys/Learn/Infinite",
-                            "/Mathsys/Learn/Tensors"
+                            "/Mathsys/Learn/Tensors",
+                            "/Mathsys/Learn/Type-declarations"
                         ]
                     }
                 ]
